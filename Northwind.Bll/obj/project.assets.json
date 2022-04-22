@@ -1494,6 +1494,21 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "Northwind.Dal/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "5.0.15",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.15",
+          "Northwind.Entity": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Northwind.Dal.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Northwind.Dal.dll": {}
+        }
+      },
       "Northwind.Entity/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -5750,6 +5765,11 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
+    "Northwind.Dal/1.0.0": {
+      "type": "project",
+      "path": "../Northwind.Dal/Northwind.Dal.csproj",
+      "msbuildProject": "../Northwind.Dal/Northwind.Dal.csproj"
+    },
     "Northwind.Entity/1.0.0": {
       "type": "project",
       "path": "../Northwind.Entity/Northwind.Entity.csproj",
@@ -5764,6 +5784,7 @@
   "projectFileDependencyGroups": {
     "net5.0": [
       "AutoMapper >= 11.0.1",
+      "Northwind.Dal >= 1.0.0",
       "Northwind.Entity >= 1.0.0",
       "Northwind.Interface >= 1.0.0"
     ]
@@ -5795,6 +5816,9 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
+            "D:\\ASP.NET\\GelecekVarlık\\egitim kodları\\Githuba atılan\\homework2\\Northwind.Dal\\Northwind.Dal.csproj": {
+              "projectPath": "D:\\ASP.NET\\GelecekVarlık\\egitim kodları\\Githuba atılan\\homework2\\Northwind.Dal\\Northwind.Dal.csproj"
+            },
             "D:\\ASP.NET\\GelecekVarlık\\egitim kodları\\Githuba atılan\\homework2\\Northwind.Entity\\Northwind.Entity.csproj": {
               "projectPath": "D:\\ASP.NET\\GelecekVarlık\\egitim kodları\\Githuba atılan\\homework2\\Northwind.Entity\\Northwind.Entity.csproj"
             },

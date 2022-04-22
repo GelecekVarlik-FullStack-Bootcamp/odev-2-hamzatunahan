@@ -1,4 +1,5 @@
-﻿using Northwind.Entity.Dto;
+﻿using Northwind.Dal.Abstract;
+using Northwind.Entity.Dto;
 using Northwind.Entity.Models;
 using Northwind.Interface;
 using System;
@@ -12,6 +13,13 @@ namespace Northwind.Bll
     public class TerritoryManager<T, TDto> : GenericManager<Territory, DtoTerritory>, ITerritoryService
     {
         //ITerritoryRepository
+        ITerritoryRepository territoryRepository;
+
+        public TerritoryManager(ITerritoryRepository territoryRepository)
+        {
+            this.territoryRepository = territoryRepository;
+        }
+
         IQueryable<DtoTerritory> ITerritoryService.GetTotalReport()
         {
             throw new NotImplementedException();

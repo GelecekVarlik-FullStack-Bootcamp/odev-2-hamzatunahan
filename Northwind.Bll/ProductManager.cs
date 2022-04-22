@@ -1,4 +1,5 @@
-﻿using Northwind.Entity.Dto;
+﻿using Northwind.Dal.Abstract;
+using Northwind.Entity.Dto;
 using Northwind.Entity.Models;
 using Northwind.Interface;
 using System;
@@ -12,6 +13,13 @@ namespace Northwind.Bll
     public class ProductManager<T, TDto> : GenericManager<Product, DtoProduct>, IProductService
     {
         //IProductRepository
+        IProductRepository productRepository;
+
+        public ProductManager(IProductRepository productRepository)
+        {
+            this.productRepository = productRepository;
+        }
+
         IQueryable<DtoProduct> IProductService.GetTotalReport()
         {
             throw new NotImplementedException();

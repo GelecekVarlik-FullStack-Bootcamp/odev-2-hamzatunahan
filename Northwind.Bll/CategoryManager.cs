@@ -1,4 +1,5 @@
-﻿using Northwind.Entity.Dto;
+﻿using Northwind.Dal.Abstract;
+using Northwind.Entity.Dto;
 using Northwind.Entity.Models;
 using Northwind.Interface;
 using System;
@@ -12,6 +13,12 @@ namespace Northwind.Bll
     public class CategoryManager<T, TDto> : GenericManager<Category, DtoCategory>, ICategoryService
     {
         //ICategoryRepository
+        ICategoryRepository categoryRepository;
+        public CategoryManager(ICategoryRepository categoryRepository)
+        {
+            this.categoryRepository = categoryRepository;
+        }
+
         public IQueryable<DtoCategory> GetTotalReport()
         {
             throw new NotImplementedException();
