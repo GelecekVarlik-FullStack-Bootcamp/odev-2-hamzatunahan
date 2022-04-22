@@ -1,7 +1,5 @@
 # odev-2-hamzatunahan
-odev-2-hamzatunahan created by GitHub Classroom
-Her bir modele ait;
-
+### Her bir modele ait;
 -Interface katmanına servis’lerin tanımlanması
 
 -Bll katmanına Manager sınıfların tanımlanması
